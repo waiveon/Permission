@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permission</string>
+    <string name="permission_explanation">%1$s 사용하시려면 접근권한에 대한 동의가 필요합니다.\n\n권한설정을 누르신 후 권한을 허용해 주세요.</string>
+    <string name="set_permission">권한설정</string>
+</resources>
