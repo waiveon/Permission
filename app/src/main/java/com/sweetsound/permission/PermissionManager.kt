@@ -56,8 +56,7 @@ class PermissionManager(): Activity() {
                 val permissionInfo = packageManager.getPermissionInfo(it, PackageManager.GET_META_DATA)
 
                 // 권한 수락이 필요한 Permission이면 권한을 가지고 있는지 체크
-                if (it.equals(android.Manifest.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS) == false &&  // REQUEST_IGNORE_BATTERY_OPTIMIZATIONS 퍼미션은 바로 셋팅화면으로 이동해 버려서 사용자 Dialog를 띄워야 한다.
-                    permissionInfo.protectionLevel > PermissionInfo.PROTECTION_NORMAL &&
+                if (permissionInfo.protectionLevel > PermissionInfo.PROTECTION_NORMAL &&
                         checkPermission(it) == false) {
                     // 권한이 없다면 권한이 없는 애들을 모아다 요청 하자.
                     mCheckPermissions.add(it)
